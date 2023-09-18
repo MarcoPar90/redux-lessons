@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "userId": 1020,
+      "title": "Hey!",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "userId": 1020,
+      "title": "Zona franca",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "userId": 1021,
+      "title": "Cavolo",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "userId": 1026,
+      "title": "prova",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "userId": 1026,
+      "title": "prova",
+      "completed": false
+    }
+  ]
+}

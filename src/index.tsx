@@ -1,19 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//import { store } from './app/store/index';
+import { Provider } from 'react-redux';
+//import { ApiProvider } from '@reduxjs/toolkit/query/react';
+//import { apiSlice } from './app/apiSlice(rtk query)/base/apiSlice';
+import { storeRtk } from './app/apiSlice(rtk query)/advance/indexSlice';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  <>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+      <Provider store={storeRtk}>
+        <App />
+      </Provider>
+    </React.StrictMode>
+  {/* simple rtk query
+    <React.StrictMode>
+      <ApiProvider api={apiSlice}>
+        <App />
+      </ApiProvider>
+    </React.StrictMode> 
+  */}
+  {/* thunk method 
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>*/}
+  </>
+  
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
